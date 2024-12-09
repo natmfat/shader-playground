@@ -34,3 +34,13 @@ playground.start();
 - `u_time` - elapsed time
 - `u_mouse` - vec2 of mouse positions relative to the container in px
 - `u_resolution` - vec2 representing container dimensions in px
+
+## Demo
+
+![a waving US flag on a black background](./demo.png)
+
+To help you get started more quickly, I created a simple waving flag [demo](demo/) that shows you how to
+
+- import glsl files with `vite-plugin-glsl`
+- use custom fragment and vertex shaders
+- provide your own uniforms
