@@ -47,6 +47,18 @@ export interface ShaderPlaygroundProps {
    * Vertex shader (controls vertices)
    */
   vertexShader: string;
+
+  /**
+   * Number of width segments plane should have
+   * Defaults to 1
+   */
+  widthSegments?: number;
+
+  /**
+   * Number of height segments plane should have
+   * Defaults to 1
+   */
+  heightSegments?: number;
 }
 
 export class ShaderPlayground {
@@ -69,6 +81,10 @@ export class ShaderPlayground {
   protected fragmentShader: string;
   protected vertexShader: string;
 
+  // plane geometry
+  protected widthSegments: number;
+  protected heightSegments: number;
+
   /**
    * Create a new shader playground
    * @param props Shader Playground configuration
@@ -78,11 +94,15 @@ export class ShaderPlayground {
     uniforms = {},
     fragmentShader = defaultFragmentShader,
     vertexShader = defaultVertexShader,
+    widthSegments = 1,
+    heightSegments = 1,
   }: Partial<ShaderPlaygroundProps> = {}) {
     // assign configuration options
     this.container = container;
     this.fragmentShader = fragmentShader;
     this.vertexShader = vertexShader;
+    this.widthSegments = widthSegments;
+    this.heightSegments = heightSegments;
 
     // asign uniforms
     Object.assign(
@@ -191,7 +211,12 @@ export class ShaderPlayground {
   setup() {
     this.scene.add(
       new THREE.Mesh(
-        new THREE.PlaneGeometry(this.width, this.height),
+        new THREE.PlaneGeometry(
+          this.width,
+          this.height,
+          this.widthSegments,
+          this.heightSegments
+        ),
         new THREE.ShaderMaterial({
           uniforms: this.uniforms,
           vertexShader: this.vertexShader,

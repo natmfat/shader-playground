@@ -9,8 +9,8 @@ importers:
   .:
     dependencies:
       shader-playground:
-        specifier: ^0.0.1
-        version: 0.0.1
+        specifier: ../shader-playground-0.0.2.tgz
+        version: file:../shader-playground-0.0.2.tgz
       three:
         specifier: ^0.171.0
         version: 0.171.0
@@ -301,15 +301,13 @@ packages:
     engines: {node: '>=18.0.0', npm: '>=8.0.0'}
     hasBin: true
 
-  shader-playground@0.0.1:
-    resolution: {integrity: sha512-x8frE/7zV9It2agEpnzLsx96B0/J2Xd9qqyn3QELhfQpMxxr8rTalaj9C0k+g6+XsBk+FIE1KamEzRMJ3inD1Q==}
+  shader-playground@file:../shader-playground-0.0.2.tgz:
+    resolution: {integrity: sha512-2zcgvdwlXWczav+nW4uRfEZQ1HleGoUkAxkXbPiBipmEwwa5VOmsfcBODOHCBd+Nkv4xMzMtXfbSoyaz/c70QQ==, tarball: file:../shader-playground-0.0.2.tgz}
+    version: 0.0.2
 
   source-map-js@1.2.1:
     resolution: {integrity: sha512-UXWMKhLOwVKb728IUtQPXxfYU+usdybtUrK/8uGE8CQMvrhOpwvzDBwj0QhSL7MQc7vIsISBG8VQ8+IDQxpfQA==}
     engines: {node: '>=0.10.0'}
-
-  three@0.160.1:
-    resolution: {integrity: sha512-Bgl2wPJypDOZ1stAxwfWAcJ0WQf7QzlptsxkjYiURPz+n5k4RBDLsq+6f9Y75TYxn6aHLcWz+JNmwTOXWrQTBQ==}
 
   three@0.171.0:
     resolution: {integrity: sha512-Y/lAXPaKZPcEdkKjh0JOAHVv8OOnv/NDJqm0wjfCzyQmfKxV7zvkwsnBgPBKTzJHToSOhRGQAGbPJObT59B/PQ==}
@@ -558,13 +556,11 @@ snapshots:
       '@rollup/rollup-win32-x64-msvc': 4.27.4
       fsevents: 2.3.3
 
-  shader-playground@0.0.1:
+  shader-playground@file:../shader-playground-0.0.2.tgz:
     dependencies:
-      three: 0.160.1
+      three: 0.171.0
 
   source-map-js@1.2.1: {}
-
-  three@0.160.1: {}
 
   three@0.171.0: {}
 

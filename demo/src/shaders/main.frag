@@ -2,8 +2,11 @@
 precision highp float;
 #endif
 
+varying vec2 v_uv;
 uniform vec2 u_resolution;
+uniform sampler2D u_flag;
 
 void main() {
-  gl_FragColor = vec4(gl_FragCoord.xy / u_resolution, 0.0, 1.0);
+  vec3 color = texture2D(u_flag, v_uv).rgb;
+  gl_FragColor = vec4(color, 1.0);
 }
