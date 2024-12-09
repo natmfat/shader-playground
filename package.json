@@ -1,6 +1,6 @@
 {
   "name": "shader-playground",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "type": "module",
   "main": "./dist/index.umd.cjs",
   "module": "./dist/index.js",
@@ -17,7 +17,7 @@
   "scripts": {
     "build": "tsc && vite build",
     "prepublish": "pnpm run prettier && pnpm run build",
-    "prettier": "prettier --write ."
+    "pretty": "prettier --write ."
   },
   "devDependencies": {
     "@types/node": "^20.10.7",
@@ -28,6 +28,6 @@
     "vite-plugin-dts": "^3.7.0"
   },
   "dependencies": {
-    "three": "^0.160.0"
+    "three": "^0.171.0"
   }
 }

@@ -1,11 +1,11 @@
 # Shader Playground
 
-A tiny wrapper around Three.js that provides you sensible uniforms and defaults to get started with fragment shaders.
+A tiny wrapper around Three.js that provides you sensible uniforms and defaults to get started with fragment shaders. Inspired by the [Book of Shaders](https://thebookofshaders.com).
 
 ## Installation
 
 ```ts
-pnpm install shader-playground
+pnpm add shader-playground
 ```
 
 ## Usage
@@ -28,3 +28,9 @@ playground.start();
 
 // when you're done, playground.dispose();
 ```
+
+## Uniforms
+
+- `u_time` - elapsed time
+- `u_mouse` - vec2 of mouse positions relative to the container in px
+- `u_resolution` - vec2 representing container dimensions in px

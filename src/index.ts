@@ -5,8 +5,10 @@ const defaultFragmentShader = `
 precision highp float;
 #endif
 
+uniform vec2 u_resolution;
+
 void main() {
-  gl_FragColor = vec4(1.0, 1.0, 0.0, 1.0);
+  gl_FragColor = vec4(gl_FragCoord.xy / u_resolution, 0.0, 1.0);
 }`;
 
 const defaultVertexShader = `
@@ -90,7 +92,7 @@ export class ShaderPlayground {
         u_mouse: { value: new THREE.Vector2(0.0, 0.0) },
         u_resolution: { value: new THREE.Vector2(0.0, 0.0) },
       },
-      uniforms,
+      uniforms
     );
 
     // setup all important properties
@@ -164,7 +166,7 @@ export class ShaderPlayground {
       fov,
       this.aspect,
       0.01,
-      distance * 2,
+      distance * 2
     );
     camera.position.z = distance;
     camera.lookAt(new THREE.Vector3(0, 0, 0));
@@ -194,8 +196,8 @@ export class ShaderPlayground {
           uniforms: this.uniforms,
           vertexShader: this.vertexShader,
           fragmentShader: this.fragmentShader,
-        }),
-      ),
+        })
+      )
     );
   }
 
