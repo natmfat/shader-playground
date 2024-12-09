@@ -23,9 +23,7 @@ void main() {
   gl_Position = projectionMatrix * modelViewMatrix * vec4(position, 1.0);
 }`;
 
-type UniformRecord = {
-  [uniform: string]: THREE.IUniform<any>;
-};
+type UniformRecord = Record<string, THREE.IUniform<any>>;
 
 export interface ShaderPlaygroundProps {
   /**
