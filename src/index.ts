@@ -110,7 +110,7 @@ export class ShaderPlayground {
         u_mouse: { value: new THREE.Vector2(0.0, 0.0) },
         u_resolution: { value: new THREE.Vector2(0.0, 0.0) },
       },
-      uniforms
+      uniforms,
     );
 
     // setup all important properties
@@ -184,7 +184,7 @@ export class ShaderPlayground {
       fov,
       this.aspect,
       0.01,
-      distance * 2
+      distance * 2,
     );
     camera.position.z = distance;
     camera.lookAt(new THREE.Vector3(0, 0, 0));
@@ -213,14 +213,14 @@ export class ShaderPlayground {
           this.width,
           this.height,
           this.widthSegments,
-          this.heightSegments
+          this.heightSegments,
         ),
         new THREE.ShaderMaterial({
           uniforms: this.uniforms,
           vertexShader: this.vertexShader,
           fragmentShader: this.fragmentShader,
-        })
-      )
+        }),
+      ),
     );
   }
 
