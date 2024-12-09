@@ -16,7 +16,7 @@
   ],
   "scripts": {
     "build": "tsc && vite build",
-    "prepublish": "pnpm run prettier && pnpm run build",
+    "prepublish": "pnpm run pretty && pnpm run build",
     "pretty": "prettier --write ."
   },
   "devDependencies": {
