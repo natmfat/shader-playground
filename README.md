@@ -37,7 +37,11 @@ playground.start();
 
 ## Demo
 
-![a waving US flag on a black background](./demo.png)
+<img 
+  src="./demo.png"
+  alt="a waving US flag on a black background"
+  width="150px"
+/>
 
 To help you get started more quickly, I created a simple waving flag [demo](demo/) that shows you how to
 
